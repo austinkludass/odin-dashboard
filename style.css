@@ -27,7 +27,7 @@ a {
     z-index: 1;
     display: grid;
     grid-template: 1fr 2fr / 3fr 2fr;
-    padding: 10px;
+    padding: 10px 30px;
 }
 
 .sidebar {
@@ -41,7 +41,7 @@ a {
     grid-template: repeat(12, 1fr) / 1fr 3fr;
     color: white;
     font-weight: bold;
-    height: 60%;
+    height: 500px;
 }
 
 .sidebar-grid > div {
@@ -87,20 +87,170 @@ input {
     padding: 0 10px;
     height: 25px;
     width: 100%;
+    color: rgb(36, 36, 36);
+    font-weight: bold;
 }
 
 input:active {
     border: none;
 }
 
-.profile-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
+input:focus {
+    outline: none;
 }
 
-.profilepic-small {
-    width: 40px;
-    height: 40px;
+.profile-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+    margin-left: 50px;
+}
+
+.txt-small {
+    font-size: 10px;
+    margin-bottom: 5px;
+}
+
+.large-profile-container {
+    display: flex;
+    font-weight: bold;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.nav-container ul {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+}
+
+.nav-container li {
+    background-color: rgb(65, 170, 235);
+    width: 80px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    padding: 8px 10px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.nav-container li:hover {
+    opacity: 0.7;
+}
+
+.icon:hover {
+    background-color: rgb(194, 216, 230);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.content {
+    display: grid;
+    gap: 20px;
+    padding: 20px 20px 60px 20px;
+    grid-template-columns: 3fr 1fr;
+    font-size: 12px;
+}
+
+.grid-header {
+    align-self: flex-end;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.projects-grid {
+    display: grid;
+    gap: 20px;
+    grid-template: 0.2fr repeat(3, 1fr) / repeat(2, 1fr);
+}
+
+.others-grid {
+    display: grid;
+    gap: 20px;
+    grid-template: 0.14fr 1fr 0.14fr 1fr / 1fr;
+}
+
+.project-card,
+.announcements-card,
+.trending-card {
+    display: grid;
+    background-color: rgb(238, 238, 238);
+    border-radius: 8px;
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.01);
+}
+
+.project-card {
+    border-left: 8px solid rgb(238, 162, 21);
+    grid-template: 1fr 5fr 1fr / 1fr;
+}
+
+.project-card div:nth-child(1) {
+    font-size: 16px;
+    align-self: center;
+    font-weight: bold;
+}
+
+.project-card div:nth-child(2) {
+    color: rgb(78, 78, 78);
+}
+
+.project-card div:nth-child(3) {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-self: flex-end;
+}
+
+.announcements-card {
+    grid-template: 1fr 0.1fr 1fr 0.1fr 1fr / 1fr;
+}
+
+.announcements-card > div {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    gap: 4px
+}
+
+.announcements-card > div div:nth-child(1) {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.announcements-card > div div:nth-child(2) {
+    color: rgb(78, 78, 78);
+}
+
+.announcements-card hr {
+    width: 100%;
+    border: none;
+    border-top: 1px solid rgb(182, 182, 182);
+}
+
+.trending-card {
+    grid-template: repeat(4, 1fr) / 0.25fr 1fr;
+    font-size: 14px;
+}
+
+.trending-card img {
+    align-self: center;
+    justify-self: flex-start;
+}
+
+.trending-card div {
+    align-self: center;
+}
+
+.trending-card div > div:nth-child(2) {
+    color: rgb(78, 78, 78);
+    margin-top: 4px;
 }
